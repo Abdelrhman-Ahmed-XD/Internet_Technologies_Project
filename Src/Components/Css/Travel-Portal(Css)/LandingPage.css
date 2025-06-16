@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../../../../Assets/Images/Home_Image.jpg") no-repeat center/cover fixed;
+    min-height: 100vh;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #205781;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.highlight {
+    color: #4F959D;
+    font-size: 140px;
+    font-family: 'Dancing Script', cursive;;
+}
+
+.highlight2 {
+    color: white;
+    font-family: 'Dancing Script', cursive;;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Subtle overlay for contrast */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    max-width: 1100px;
+}
+
+h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.6em;
+    font-weight: 300;
+    margin: 0 auto 40px auto;
+    color: #f0f8ff;
+    max-width: 900px;
+    line-height: 1.5;
+}
+
+.button-group {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.home-btn, .hotel-btn {
+    padding: 18px 36px;
+    font-size: 1.2em;
+    font-weight: 500;
+    background: linear-gradient(135deg, #205781 0%, #4F959D 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50px; /* Softer, modern corners */
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.home-btn:hover, .hotel-btn:hover {
+    background: linear-gradient(135deg, #4F959D 0%, #205781 100%);
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .home-btn, .hotel-btn {
+        padding: 14px 28px;
+        font-size: 1em;
+    }
+}

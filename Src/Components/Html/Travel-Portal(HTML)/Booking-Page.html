@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../../Assets/Images/Logo.png" type="image/png">
+    <title>Flight-Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../../Css/Travel-Portal(Css)/Booking-Page.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="Booking-Page.html" style="text-decoration: none">
+            <img src="../../../../Assets/Images/Logo.png" alt="Logo" id="logo-img">
+        </a>
+        <a href="Booking-Page.html" style="text-decoration: none">
+            <h1 class="header-title">TravelVista</h1>
+        </a>
+    </div>
+    <div class="links">
+        <ul class="nav-links">
+            <li><a href="Home-Page.html">Home</a></li>
+            <li><a href="Hotels-Page.html">Hotels</a></li>
+            <li><a id="special" href="../Travel-Portal(HTML)/Booking-Page.html">Booking</a></li>
+            <li><a href="../Travel-Portal(HTML)/Sign-In.html">Sign In / Sign Up</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="booking-container">
+        <div class="booking-header">
+            <h1>Complete Flight Booking</h1>
+            <p>Fill in all details for your perfect journey</p>
+        </div>
+        
+        <div class="booking-form">
+            <form id="flight-form">
+                <section class="form-section">
+                    <div class="section-title">
+                        <i class="fas fa-plane"></i> Flight Details
+                    </div>
+                    
+                    <div class="flight-type">
+                        <label>
+                            <input type="radio" name="flight-type" checked>
+                            <span>Round Trip</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="flight-type">
+                            <span>One Way</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="flight-type">
+                            <span>Multi-City</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="from">From</label>
+                            <div class="input-with-icon">
+                                <input type="text" id="from">
+                                <i class="fas fa-plane-departure input-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group swap-container">
+                            <label for="to">To</label>
+                            <div class="input-with-icon">
+                                <select id="to">
+                                    <option value="">Select Destination</option>
+                                    <option value="Egypt">Egypt</option>
+                                    <option value="France">France</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="China">China</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="Australia">Australia</option>
+                                </select>
+                                <i class="fas fa-plane-arrival input-icon"></i>
+                            </div>
+                            <button type="button" class="swap-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Departure & Return</label>
+                            <div class="date-inputs">
+                                <input type="date" id="departure">
+                                <input type="date" id="return">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="passengers">Passengers</label>
+                            <div class="passenger-selector">
+                                <button type="button" class="decrement">-</button>
+                                <input type="number" id="passengers" value="1" min="1" max="10" readonly>
+                                <button type="button" class="increment">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="airline">Preferred Airline</label>
+                            <select id="airline">
+                                <option value="">Any Airline</option>
+                                <option value="egyptair">EgyptAir</option>
+                                <option value="emirates">Emirates</option>
+                                <option value="qatar">Qatar Airways</option>
+                                <option value="etihad">Etihad Airways</option>
+                                <option value="saudia">Saudia</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="class">Travel Class</label>
+                            <select id="class">
+                                <option value="economy">Economy</option>
+                                <option value="premium">Premium Economy</option>
+                                <option value="business">Business</option>
+                                <option value="first">First Class</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="form-section">
+                    <div class="section-title">
+                        <i class="fas fa-user"></i> Personal Information
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" placeholder="Your full name as in passport">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" min="1" max="120" placeholder="Your age (18-120)">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="gender-options">
+                            <div class="gender-option">
+                                <input type="radio" id="male" name="gender" value="male" checked>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="gender-option">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="gender-option">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Engineer</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="passport">Passport Number</label>
+                        <input type="text" id="passport" placeholder="Your passport number">
+                    </div>
+                </section>
+                
+                <section class="form-section">
+                    <div class="section-title">
+                        <i class="fas fa-chair"></i> Seat Selection
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Select Your Preferred Seats (Max 6)</label>
+                        <div class="seats-container">
+                            <input type="checkbox" id="seat-1" class="seat-checkbox">
+                            <label for="seat-1" class="seat-label">1A</label>
+                            <input type="checkbox" id="seat-2" class="seat-checkbox">
+                            <label for="seat-2" class="seat-label">1B</label>
+                            <input type="checkbox" id="seat-3" class="seat-checkbox">
+                            <label for="seat-3" class="seat-label">1C</label>
+                            <input type="checkbox" id="seat-4" class="seat-checkbox">
+                            <label for="seat-4" class="seat-label">2A</label>
+                            <input type="checkbox" id="seat-5" class="seat-checkbox">
+                            <label for="seat-5" class="seat-label">2B</label>
+                            <input type="checkbox" id="seat-6" class="seat-checkbox">
+                            <label for="seat-6" class="seat-label">2C</label>
+                            <input type="checkbox" id="seat-7" class="seat-checkbox">
+                            <label for="seat-7" class="seat-label">3A</label>
+                            <input type="checkbox" id="seat-8" class="seat-checkbox">
+                            <label for="seat-8" class="seat-label">3B</label>
+                            <input type="checkbox" id="seat-9" class="seat-checkbox">
+                            <label for="seat-9" class="seat-label">3C</label>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="form-section">
+                    <div class="section-title">
+                        <i class="fas fa-hotel"></i> Hotel Accommodation
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="hotel">Hotel Preference</label>
+                            <select id="hotel">
+                                <option value="">No hotel needed</option>
+                                <option value="Nile Majesty">Nile Majesty</option>
+                                <option value="Riviera Escape">Riviera Escape</option>
+                                <option value="Zen Resort">Zen Resort</option>
+                                <option value="Palazzo Elegante">Palazzo Elegante</option>
+                                <option value="Imperial Palace">Imperial Palace</option>
+                                <option value="Black Sea Haven">Black Sea Haven</option>
+                                <option value="Coral Bay Resort">Coral Bay Resort</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="room-type">Room Type</label>
+                            <select id="room-type">
+                                <option value="">Select room type</option>
+                                <option value="single">Single Room</option>
+                                <option value="double">Double Room</option>
+                                <option value="suite">Suite</option>
+                                <option value="deluxe">Deluxe Room</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="check-in">Check-in Date</label>
+                            <input type="date" id="check-in">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="check-out">Check-out Date</label>
+                            <input type="date" id="check-out">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="special-requests">Special Requests</label>
+                        <textarea id="special-requests" rows="3" placeholder="Any special requests for your stay"></textarea>
+                    </div>
+                </section>
+                
+                <button type="submit" class="submit-btn">
+                    Complete Booking <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../../JS/Booking-Page.js"></script>
+</body>
+</html>

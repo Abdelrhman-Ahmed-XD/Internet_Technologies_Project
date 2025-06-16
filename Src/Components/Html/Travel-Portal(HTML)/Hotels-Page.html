@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../../../Assets/Images/Logo.png" type="image/png">
+  <title>Hotels</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="../../Css/Travel-Portal(Css)/Hotels-Page.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="../../../LandingPage.html" style="text-decoration: none">
+      <img src="../../../../Assets/Images/Logo.png" alt="Logo" id="logo-img">
+    </a>
+    <a href="../../../LandingPage.html" style="text-decoration: none">
+      <h1 class="header-title">TravelVista</h1>
+    </a>
+  </div>
+  <div class="links">
+    <ul class="nav-links">
+      <li><a href="Home-Page.html">Home</a></li>
+      <li><a id="special" href="">Hotels</a></li>
+      <li><a href="../Travel-Portal(HTML)/Booking-Page.html">Booking</a></li>
+      <li><a href="../Travel-Portal(HTML)/Sign-In.html">Sign In / Sign Up</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="main-title">
+  <br>
+  <h2>Explore Our Top Hotel Destinations</h2>
+</section>
+
+<!-- Search Form -->
+<div class="search-container">
+  <form action="" class="search-form" id="search-form">
+    <input
+            type="search"
+            name="search-methods"
+            id="searchInput"
+            placeholder="Search Hotels..."
+            aria-label="Search Hotels"
+    >
+    <button type="submit" class="search-button">Search</button>
+  </form>
+</div>
+
+<div class="container">
+  <div class="tourism-grid">
+    <div class="tourism-box-link">
+      <div class="tourism-box">
+        <img src="../../../../Assets/Images/Hotel_Images/Egypt_Hotel.png" alt="Hotel 1">
+        <div class="overlay">
+          <h2>Nile Majesty</h2>
+          <h3>Egypt</h3>
+          <p>Indulge in luxury with a stunning poolside view in the heart of Cairo.</p>
+          <div class="rating" id="rating-1"></div>
+          <button class="book-now-btn" data-hotel="Nile Majesty">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="tourism-box-link">
+      <div class="tourism-box">
+        <img src="../../../../Assets/Images/Hotel_Images/France_Hotel1.png" alt="Hotel 2">
+        <div class="overlay">
+          <h2>Riviera Escape</h2>
+          <h3>France</h3>
+          <p>Relax by the pool with breathtaking coastal views on the French Riviera.</p>
+          <div class="rating" id="rating-2"></div>
+          <button class="book-now-btn" data-hotel="Riviera Escape">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="tourism-box-link">
+      <div class="tourism-box">
+        <img src="../../../../Assets/Images/Hotel_Images/Japan_Hotel.png" alt="Hotel 3">
+        <div class="overlay">
+          <h2>Zen Resort</h2>
+          <h3>Japan</h3>
+          <p>Unwind at a tranquil resort with a tropical poolside oasis in Okinawa.</p>
+          <div class="rating" id="rating-3"></div>
+          <button class="book-now-btn" data-hotel="Zen Resort">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="tourism-box-link">
+      <div class="tourism-box">
+        <img src="../../../../Assets/Images/Hotel_Images/Italy_Hotel.png" alt="Hotel 4">
+        <div class="overlay">
+          <h2>Palazzo Elegante</h2>
+          <h3>Italy</h3>
+          <p>Experience timeless elegance in a luxurious suite in the heart of Florence.</p>
+          <div class="rating" id="rating-4"></div>
+          <button class="book-now-btn" data-hotel="Palazzo Elegante">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="tourism-box-link">
+      <div class="tourism-box">
+        <img src="../../../../Assets/Images/Hotel_Images/China_Hotel.png" alt="Hotel 5">
+        <div class="overlay">
+          <h2>Imperial Palace</h2>
+          <h3>China</h3>
+          <p>Experience regal elegance with a luxurious pool in the heart of Shanghai.</p>
+          <div class="rating" id="rating-5"></div>
+          <button class="book-now-btn" data-hotel="Imperial Palace">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="tourism-box-link">
+      <div class="tourism-box">
+        <img src="../../../../Assets/Images/Hotel_Images/Russia_Hotel.png" alt="Hotel 6">
+        <div class="overlay">
+          <h2>Black Sea Haven</h2>
+          <h3>Russia</h3>
+          <p>Relax by the pool in a peaceful retreat along the Black Sea coast.</p>
+          <div class="rating" id="rating-6"></div>
+          <button class="book-now-btn" data-hotel="Black Sea Haven">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="tourism-box-link">
+      <div class="tourism-box">
+        <img src="../../../../Assets/Images/Hotel_Images/Australia_Hotel.png" alt="Hotel 7">
+        <div class="overlay">
+          <h2>Coral Bay Resort</h2>
+          <h3>Australia</h3>
+          <p>Enjoy a tropical poolside paradise near the Great Barrier Reef.</p>
+          <div class="rating" id="rating-7"></div>
+          <button class="book-now-btn" data-hotel="Coral Bay Resort">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Ready to book your stay? Contact us to plan your perfect trip!</p>
+  <a href="../Travel-Portal(HTML)/Booking-Page.html" class="booking-button">Book Now</a>
+</footer>
+
+<!-- JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../../JS/Hotels-Page.js"></script>
+</body>
+</html>
