@@ -86,4 +86,4 @@ Each major page features a dedicated UI mockup:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/travel-vista.git
+   git clone https://github.com/Abdelrhman-Ahmed-XD/Internet_Technologies_Project.git
