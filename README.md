@@ -73,15 +73,6 @@ Countries included:
 
 ---
 
-## 📸 UI Samples
-
-Each major page features a dedicated UI mockup:
-- Landing, Home, Hotels, Booking, and Country Pages
-- User Authentication (Sign in / Sign up)
-- Alert messages for search results
-
----
-
 ## 🚀 How to Run Locally
 
 1.Clone this repository:
