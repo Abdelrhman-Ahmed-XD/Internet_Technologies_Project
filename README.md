@@ -84,6 +84,6 @@ Each major page features a dedicated UI mockup:
 
 ## 🚀 How to Run Locally
 
-1. Clone this repository:
+1.Clone this repository:
    ```bash
    git clone https://github.com/Abdelrhman-Ahmed-XD/Internet_Technologies_Project.git
